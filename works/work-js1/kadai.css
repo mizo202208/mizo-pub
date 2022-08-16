@@ -44,3 +44,8 @@ header  {
 .works-a {
   grid-row: 2 ;
 }
+
+.footer {
+  width: 1200px;
+  text-align: center;
+}
