@@ -41,22 +41,16 @@ if (i % 2 === 0 ) {
 
 //各種ボタン要素を取得しておく
 var dialog = document.getElementById('daialog');
-var btn = document.getElementById('btn');
-var add = document.getElementById('add');
+const add = document.getElementById('add');
 var unadd = document.getElementById('unadd');
 
 
-//ボタンがクリックされるとダイアログを表示する
-btn.addEventListener('click', function() {
-    dialog.style.display = 'block';
-    this.style.display = 'none';
-})
 
 
 //追加ボタンがクリックされたら背景色を表示する
-add.addEventListener('click', function() {
-    bBox.style.display = 'block';    
-})
+add.addEventListener('click', () => {
+    bBox.style.display = 'block';
+});
 
 
 //削除ボタンがクリックされたら背景色を非表示
