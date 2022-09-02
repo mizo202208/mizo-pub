@@ -39,26 +39,29 @@ if (i % 2 === 0 ) {
     console.log(i);
 }}
 
-// add-btnというidをもつHTML要素を取得し、定数に代入する
-const addBtn = document.getElementById('add-btn');
-
-// 表示・非表示
-const Box = document.getElementById('Box');
-
-
+//各種ボタン要素を取得しておく
+var dialog = document.getElementById('daialog');
+var btn = document.getElementById('btn');
+var add = document.getElementById('add');
+var unadd = document.getElementById('unadd');
 
 
+//ボタンがクリックされるとダイアログを表示する
+btn.addEventListener('click', function() {
+    dialog.style.display = 'block';
+    this.style.display = 'none';
+})
 
-function changeElement(el) {
-    if (el.style.display == '') {
-        el.style.display = 'none';
-    } else {
-        el.style.display = '';
-    }
-}
 
-// ボタンクリック時に実行
-addBtn.addEventListener('click', ()=> {
-    changeElement(Box);
-});
+//追加ボタンがクリックされたら背景色を表示する
+add.addEventListener('click', function() {
+    bBox.style.display = 'block';    
+})
+
+
+//削除ボタンがクリックされたら背景色を非表示
+unadd.addEventListener('click', function() {
+    bBox.style.display = 'none';
+})
+
 
