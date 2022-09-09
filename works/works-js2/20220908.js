@@ -1,6 +1,7 @@
+// up-btnというidを持つHTML要素を取得し、定数に代入する
+const  upBtn = document.getElementById('up-btn');
 
-//課題０５ up-btnというidを持つHTML要素を取得し、定数に代入する
-const upBtn = document.getElementById('up-btn');
+
 
 //画面がスクロールされたときにイベント処理を実行する
 window.addEventListener('scroll', () => {
@@ -16,4 +17,21 @@ window.addEventListener('scroll', () => {
     upBtn.style.display = 'none';
   }
   
-})
+
+//upボタンを押すとスクロールして上がる
+  $(function() {
+   
+    $(upBtn).on('click', function(){
+      scrollTo(0,0);
+      console.log('ボタンがクリックされました');
+    });
+
+    
+
+
+    
+  });
+
+  
+});
+
