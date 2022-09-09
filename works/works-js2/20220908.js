@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //課題０５ up-btnというidを持つHTML要素を取得し、定数に代入する
 const upBtn = document.getElementById('up-btn');
 
@@ -17,8 +17,3 @@ window.addEventListener('scroll', () => {
   }
   
 })
-
-
-=======
-//課題０５
->>>>>>> 285c46f593ac52d577132bfa99a6d1d45a7f2c2a

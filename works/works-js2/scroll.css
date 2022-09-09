@@ -1,5 +1,5 @@
 #up-btn {
-<<<<<<< HEAD
+
     display: none;
     
     padding: 40px 40px 40px 40px;
@@ -27,14 +27,4 @@
 .screen3 {
     height: 100vh;
     background-color: yellow;
-=======
-    width: 100px;
-    height: 100px;
-    text-align: center;
- 
-    background-color: blue;
-    color: #ffff;
-    border-radius: 100px;
-
->>>>>>> 285c46f593ac52d577132bfa99a6d1d45a7f2c2a
 }
