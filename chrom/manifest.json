@@ -9,16 +9,11 @@
   {
     "matches": ["https://www.yahoo.co.jp/*"],
     "js": ["alert.js"]
+  
   }
 ],
 "permissions": [
   "storage"
-],
-"content_scripts": [
-  {
-    "matches": ["https://www.yahoo.co.jp/*"],
-    "js": ["alert2.js"]
-  }
 ]
 }
 
