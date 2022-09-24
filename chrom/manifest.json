@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "My Extension",
+  "version": "1.0.0",
+  "action": {"default_popup": "popup.html"
+},
+"content_scripts": [
+  {
+    "matches": ["https://www.yahoo.co.jp/*"],
+    "js": ["alert.js"]
+  }
+]
+}
+
+

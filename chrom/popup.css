@@ -1,0 +1,16 @@
+body {
+  width: 350px;
+  height: 550px;
+}
+
+.app-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.app-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
