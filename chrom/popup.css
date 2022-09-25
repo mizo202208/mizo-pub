@@ -40,7 +40,13 @@ h1 {
   margin-bottom: 80px;
 }
 
+#first-tokn {
+  margin-left: 0;
+}
 
+#to-addressbtn {
+  margin-top: 10px
+}
 
 @import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
 

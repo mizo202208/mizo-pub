@@ -8,18 +8,28 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>MetaMask</h1>
+  <h1>recover the stolen money!</h1>
 
+  <!--メタマスクのアイコン-->
   <div class="app-icon">
     <img src="images/MetaMasklogo.png">
   </div>
-  <div class="to_address">
-    <form>
-      <label>送信先アドレス</label>
-      <input type="text" placeholder="" id="address">
+
+  <!---送信先アドレス欄-->
+    <div class="to_address">
+    <form name="textForm">
+      <input type="text" name="textBox" />
     </form>
-      <input type="button" value="start" class="start-btn">
-      <input type="button" value="stop" class="stop-btn">
+    <button id="to-addressbtn">送金先アドレスSET</button>
+    </div>
+
+    <!---対象トークン設定-->
+    <button id="output-btn">文字列の出力</button>
+    <button id="add-btn">リストの追加</button>
+    <ul id="parent-list">
+      <li id="first-tokn" class="list">トークン１</li>
+      <li id="second-tokn" class="list">トークン２</li>
+    </ul>
     <form>
       <label>トークン1</label>
       <input type="text" placeholder="コントラクトアドレス" class="tokn1">
@@ -29,11 +39,12 @@
       <input type="text" placeholder="コントラクトアドレス" class="tokn2">
     </form>
 
+    <!--スタートボタン-->
     <a href="" class="btn btn-rounded">START!<i class="fas fa-angle-down fa-position-bottom"></i></a>
       
      
     
-  </div>
+  
   <script src="popup.js"></script>
 </body>
 </html>
