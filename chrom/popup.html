@@ -15,32 +15,42 @@
     <img src="images/MetaMasklogo.png">
   </div>
 
+<h1 id="touroku">＜登録画面＞</h1>
+
   <!---送信先アドレス欄-->
-    <div class="to_address">
-    <form name="textForm">
-      <input type="text" name="textBox" />
-    </form>
-    <button id="to-addressbtn">送金先アドレスSET</button>
-    </div>
+  
+  <form name="textForm">
+      <input type="text" name="textBox" id="soukin" />
+      <button id="to-addressbtn">送金先アドレスSET</button>
+  </form>  
 
     <!---対象トークン設定-->
-    <button id="output-btn">文字列の出力</button>
-    <button id="add-btn">リストの追加</button>
-    <ul id="parent-list">
-      <li id="first-tokn" class="list">トークン１</li>
-      <li id="second-tokn" class="list">トークン２</li>
-    </ul>
-    <form>
-      <label>トークン1</label>
-      <input type="text" placeholder="コントラクトアドレス" class="tokn1">
-    </form>
-    <form>
-      <label>トークン2</label>
-      <input type="text" placeholder="コントラクトアドレス" class="tokn2">
-    </form>
+    
+      <div id="tokn-1">
+        <label>トークン1</label>
+        <input type="text" name="textBox1" id="tokn1">
+        <button id="toknset1">SET</button>
+      </div>
 
-    <!--スタートボタン-->
-    <a href="" class="btn btn-rounded">START!<i class="fas fa-angle-down fa-position-bottom"></i></a>
+      <div id="tokn-2">
+        <label>トークン2</label>
+        <input type="text" name="textBox" id="tokn2">
+        <button id="toknset2">SET</button>
+      </div>
+
+      <div id="tokn-3">
+        <label>トークン3</label>
+        <input type="text" name="textBox" id="tokn3">
+        <button id="toknset3">SET</button>
+      </div>
+    
+  
+
+  <!--リンク-->
+  <a href="popup2.html">確認/実行画面</a>
+
+  <!--スタートボタン-->
+    
       
      
     
