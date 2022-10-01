@@ -7,7 +7,7 @@ const toAddressbtn = document.getElementById('to-addressbtn');
 toAddressbtn.addEventListener('click', () => {
 
   //テキストボックスに入力された文字列を取得する
-  const text = document.forms.textForm.textBox.value
+  const text = document.soukin.value;
 
   //取得した文字列を出力する
   alert("登録アドレス" + text);
@@ -38,7 +38,7 @@ const toknSet1 = document.getElementById('toknset1')
 // HTML要素がクリックされたされたときにイベント処理を実行する
 toknSet1.addEventListener('click', () => {
   //テキストボックスに入力された文字列を取得する
-  const tokn1 = document.forms.textForm.textBox.value;
+  const tokn1 = document.tokn1.textContent;
 
   //取得した文字列を出力する
   console.log(tokn1);
