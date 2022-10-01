@@ -7,7 +7,7 @@ const toAddressbtn = document.getElementById('to-addressbtn');
 toAddressbtn.addEventListener('click', () => {
 
   //テキストボックスに入力された文字列を取得する
-  const text = document.soukin.value;
+  const text = document.getElementById('soukin').value;
 
   //取得した文字列を出力する
   alert("登録アドレス" + text);
@@ -21,7 +21,6 @@ toAddressbtn.addEventListener('click', () => {
   },function (){
     alert("登録完了")
   })
-
 }
 
 // 送金先アドレスを表示
@@ -38,13 +37,31 @@ const toknSet1 = document.getElementById('toknset1')
 // HTML要素がクリックされたされたときにイベント処理を実行する
 toknSet1.addEventListener('click', () => {
   //テキストボックスに入力された文字列を取得する
-  const tokn1 = document.tokn1.textContent;
+  const tokn1 = document.getElementById('tokn1').value;
 
   //取得した文字列を出力する
   console.log(tokn1);
 });
 
+// トークン１を保存
+function save () {
+  const tokun1 = document.getElementById('tokn1').value;
+  chrome.storage.local.set ({
+    "tokn01":tokun1
+  },function (){
+    alert("トークン１登録完了")
+  })
 
+}
+
+// トークン１を表示
+function load () {
+  chrome.storage.local.get(["tokn1"],function(test) {
+    const tokun1 = test.tokun1;
+    document.getElementById("tokn1").value = tokun1;
+    })
+}
+document.getElementById('toknset1').addEventListener("click",save)
 document.getElementById('to-addressbtn').addEventListener("click",save)
 document.addEventListener('DOMContentLoaded', load);
 
