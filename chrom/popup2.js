@@ -21,6 +21,11 @@ function load () {
     })
 }
 
+// トークン１を表示
+function load () {
+  chrome.storage.local.get(["tokn01"])
+}
+
 document.addEventListener('DOMContentLoaded', load);
 
 

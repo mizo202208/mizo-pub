@@ -24,7 +24,7 @@ toAddressbtn.addEventListener('click', () => {
 }
 
 // 送金先アドレスを表示
-function load () {
+  function load () {
   chrome.storage.local.get(["address"],function(test) {
     const address = test.address;
     document.getElementById("soukin").value = address;
@@ -56,7 +56,7 @@ function save () {
 
 // トークン１を表示
 function load () {
-  chrome.storage.local.get(["tokn1"],function(test) {
+  chrome.storage.local.get(["tokn01"],function(test) {
     const tokun1 = test.tokun1;
     document.getElementById("tokn1").value = tokun1;
     })
