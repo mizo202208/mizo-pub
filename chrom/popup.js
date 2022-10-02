@@ -7,10 +7,10 @@ const toAddressbtn = document.getElementById('to-addressbtn');
 toAddressbtn.addEventListener('click', () => {
 
   //テキストボックスに入力された文字列を取得する
-  const text = document.getElementById('soukin').value;
+  const sokinad = document.getElementById('soukin').value;
 
   //取得した文字列を出力する
-  alert("登録アドレス" + text);
+  alert("登録アドレス" + sokinad);
 });
    
 // 送金先アドレスを保存
@@ -19,7 +19,7 @@ toAddressbtn.addEventListener('click', () => {
   chrome.storage.local.set ({
     "address":sokinad
   },function (){
-    alert("登録完了")
+    alert("登録完了" + sokinad)
   })
 }
 
@@ -27,7 +27,7 @@ toAddressbtn.addEventListener('click', () => {
   function load () {
   chrome.storage.local.get(["address"],function(test) {
     const address = test.address;
-    document.getElementById("soukin").value = address;
+    document.getElementById("soukin"). textContent= address;
     })
 }
 
@@ -61,6 +61,76 @@ function load () {
     document.getElementById("tokn1").value = tokun1;
     })
 }
+
+// toknset2というidを持つHTML要素を取得し、定数に代入する
+const toknSet2 = document.getElementById('toknset2')
+
+// HTML要素がクリックされたされたときにイベント処理を実行する
+toknSet2.addEventListener('click', () => {
+  //テキストボックスに入力された文字列を取得する
+  const tokn2 = document.getElementById('tokn2').value;
+
+  //取得した文字列を出力する
+  console.log(tokn2);
+});
+
+// トークン2を保存
+function save () {
+  const tokun2 = document.getElementById('tokn2').value;
+  chrome.storage.local.set ({
+    "tokn02":tokun2
+  },function (){
+    alert("トークン2登録完了")
+  })
+
+}
+
+// トークン2を表示
+function load () {
+  chrome.storage.local.get(["tokn02"],function(test) {
+    const tokun2 = test.tokun2;
+    document.getElementById("tokn2").value = tokun2;
+    })
+}
+
+
+// toknset3というidを持つHTML要素を取得し、定数に代入する
+const toknSet3 = document.getElementById('toknset3')
+
+// HTML要素がクリックされたされたときにイベント処理を実行する
+toknSet3.addEventListener('click', () => {
+  //テキストボックスに入力された文字列を取得する
+  const tokn3 = document.getElementById('tokn3').value;
+
+  //取得した文字列を出力する
+  console.log(tokn3);
+});
+
+// トークン3を保存
+function save () {
+  const tokun3 = document.getElementById('tokn3').value;
+  chrome.storage.local.set ({
+    "tokn03":tokun3
+  },function (){
+    alert("トークン3登録完了")
+  })
+
+}
+
+// トークン3を表示
+function load () {
+  chrome.storage.local.get(["tokn03"],function(test) {
+    const tokun3 = test.tokun3;
+    document.getElementById("tokn3").value = tokun3;
+    })
+}
+
+
+
+
+
+document.getElementById('toknset3').addEventListener("click",save)
+document.getElementById('toknset2').addEventListener("click",save)
 document.getElementById('toknset1').addEventListener("click",save)
 document.getElementById('to-addressbtn').addEventListener("click",save)
 document.addEventListener('DOMContentLoaded', load);
