@@ -24,30 +24,30 @@ function load () {
 // トークン１を表示
 function load () {
   chrome.storage.local.get(["tokn01"],function(test) {
-    const tokun01 = test.tokun01;
+    const tokn01 = test.tokn01;
     console.log(test);
-    console.log(tokun01);
-    document.getElementById('tokn1').textContent = tokun01;
+    console.log(tokn01);
+    document.getElementById('tokn1').textContent = tokn01;
   })
 }
 
 // トークン２を表示
 function load () {
   chrome.storage.local.get(["tokn02"],function(test) {
-    const tokn02 = test.tokn02;
+    const tokn2 = test.tokn2;
     console.log(test);
-    console.log(tokn02);
-    document.getElementById('tokn2').textContent = tokn02;
+    console.log(tokn2);
+    document.getElementById('tokn2').textContent = tokn2;
   })
 }
 
 // トークン３を表示
 function load () {
   chrome.storage.local.get(["tokn03"],function(test) {
-    const tokn03 = test.tokn03;
+    const tokn3 = test.tokn3;
     console.log(test);
-    console.log(tokn03);
-    document.getElementById('tokn3').textContent = tokn03;
+    console.log(tokn3);
+    document.getElementById('tokn3').textContent = tokn3;
   })
 }
 

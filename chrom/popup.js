@@ -15,11 +15,11 @@ toAddressbtn.addEventListener('click', () => {
    
 // 送金先アドレスを保存
   function save () {
-  const sokinAd = document.getElementById('soukin').value;
+  const sokinad = document.getElementById('soukin');
   chrome.storage.local.set ({
-    "address":sokinAd
+    "address":sokinad
   },function (){
-    alert("登録完了" + sokinAd)
+    alert("登録完了" + sokinad)
   })
 }
 
@@ -88,8 +88,8 @@ function save () {
 // トークン2を表示
 function load () {
   chrome.storage.local.get(["tokn02"],function(test) {
-    const tokn02 = test.tokun2;
-    document.getElementById("tokn2").value = tokn02;
+    const tokn2 = test.tokun2;
+    document.getElementById("tokn2").value = tokn2;
     })
 }
 
@@ -108,9 +108,9 @@ toknSet3.addEventListener('click', () => {
 
 // トークン3を保存
 function save () {
-  const tokn03 = document.getElementById('tokn3').value;
+  const tokn3 = document.getElementById('tokn3').value;
   chrome.storage.local.set ({
-    "tokn03":tokn03
+    "tokn03":tokn3
   },function (){
     alert("トークン3登録完了")
   })
@@ -120,10 +120,10 @@ function save () {
 // トークン3を表示
 function load () {
   chrome.storage.local.get(["tokn03"],function(test) {
-    const tokn03 = test.tokn03;
+    const tokn3 = test.tokn3;
     console.log(test);
-    console.log(tokn03);
-    document.getElementById('tokn3').textContent = tokn03;
+    console.log(tokn3);
+    document.getElementById('tokn3').textContent = tokn3.value;
   })
 }
 
