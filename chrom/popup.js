@@ -15,11 +15,11 @@ toAddressbtn.addEventListener('click', () => {
    
 // 送金先アドレスを保存
   function save () {
-  const sokinad = document.getElementById('soukin').value;
+  const sokinAd = document.getElementById('soukin').value;
   chrome.storage.local.set ({
-    "address":sokinad
+    "address":sokinAd
   },function (){
-    alert("登録完了" + sokinad)
+    alert("登録完了" + sokinAd)
   })
 }
 
@@ -88,8 +88,8 @@ function save () {
 // トークン2を表示
 function load () {
   chrome.storage.local.get(["tokn02"],function(test) {
-    const tokun2 = test.tokun2;
-    document.getElementById("tokn2").value = tokun2;
+    const tokn02 = test.tokun2;
+    document.getElementById("tokn2").value = tokn02;
     })
 }
 
@@ -108,9 +108,9 @@ toknSet3.addEventListener('click', () => {
 
 // トークン3を保存
 function save () {
-  const tokun3 = document.getElementById('tokn3').value;
+  const tokn03 = document.getElementById('tokn3').value;
   chrome.storage.local.set ({
-    "tokn03":tokun3
+    "tokn03":tokn03
   },function (){
     alert("トークン3登録完了")
   })
@@ -120,20 +120,50 @@ function save () {
 // トークン3を表示
 function load () {
   chrome.storage.local.get(["tokn03"],function(test) {
-    const tokun3 = test.tokun3;
-    document.getElementById("tokn3").value = tokun3;
-    })
+    const tokn03 = test.tokn03;
+    console.log(test);
+    console.log(tokn03);
+    document.getElementById('tokn3').textContent = tokn03;
+  })
 }
 
+// Ajax GET通信
+//const testGetRequest = document.getElementById('test_get_btn');
+//const testGetRequest = {} => {
+  //console.log('========= Ajax GET通信　実行　＝＝＝＝')
+//}
 
 
+// リクエスト用変数の作成
+//let httpRequest = new XMLHttpRequest ();
+
+// リクエスト先の設定
+//const url = 'https://httpbin.org';
+//let endpoint = '/get';
+//httpRequest.open{'GET', url + endpoint}
+
+// もしレスポンスが返ってきたら、やること
+//httpRequest.onload = () => {
+  // レスポンス時の処理
+  //console.log('通信成功！');
+//}
+
+// 通信エラーのときに実行される処理
+//httpRequest.onerror = () => {
+  //console.log('通信失敗');
+//}
+
+// GET　リクエスト通信の実行
+//httpRequest.send();
 
 
+//document.getElementById('test_get_btn').addEventListener("click",testGetRequest)
 document.getElementById('toknset3').addEventListener("click",save)
 document.getElementById('toknset2').addEventListener("click",save)
 document.getElementById('toknset1').addEventListener("click",save)
 document.getElementById('to-addressbtn').addEventListener("click",save)
 document.addEventListener('DOMContentLoaded', load);
+
 
 
 
