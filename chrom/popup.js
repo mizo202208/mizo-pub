@@ -120,10 +120,12 @@ function save () {
 // トークン3を表示
 function load () {
   chrome.storage.local.get(["tokn03"],function(test) {
-    const tokn3 = test.tokn3;
+    const tokn3 = test.tokn03;
     console.log(test);
     console.log(tokn3);
-    document.getElementById('tokn3').textContent = tokn3.value;
+    if (tokn3) {
+    document.getElementById('tokn3').textContent = tokn3;
+    }
   })
 }
 
