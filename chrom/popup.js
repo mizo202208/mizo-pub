@@ -134,36 +134,39 @@ function load () {
 }
 
 // Ajax GET通信
-//const testGetRequest = document.getElementById('test_get_btn');
+const testGetRequest = document.getElementById('test_get_btn');
 //const testGetRequest = {} => {
-  //console.log('========= Ajax GET通信　実行　＝＝＝＝')
-//}
+  console.log('========= Ajax GET通信　実行　＝＝＝＝')
+
 
 
 // リクエスト用変数の作成
-//let httpRequest = new XMLHttpRequest ();
+let httpRequest = new XMLHttpRequest ();
+
+const endpoint = 'https://httpbin.org' + '/endpoint';
+const query = '?xxx=xxx&yyy=yyy';
+const url = endpoint + query;
 
 // リクエスト先の設定
-//const url = 'https://httpbin.org';
-//let endpoint = '/get';
-//httpRequest.open{'GET', url + endpoint}
+httpRequest.open('GET', url);
 
-// もしレスポンスが返ってきたら、やること
-//httpRequest.onload = () => {
+// もし通信に成功したらやること
+httpRequest.onload = () => {
   // レスポンス時の処理
-  //console.log('通信成功！');
-//}
+  console.log('通信成功！');
+}
 
 // 通信エラーのときに実行される処理
-//httpRequest.onerror = () => {
-  //console.log('通信失敗');
-//}
+httpRequest.onerror = () => {
+  console.log('通信失敗');
+}
 
 // GET　リクエスト通信の実行
-//httpRequest.send();
+httpRequest.send();
+//}
 
 
-//document.getElementById('test_get_btn').addEventListener("click",testGetRequest)
+document.getElementById('test_get_btn').addEventListener("click",testGetRequest)
 document.getElementById('toknset3').addEventListener("click",save)
 document.getElementById('toknset2').addEventListener("click",save)
 document.getElementById('toknset1').addEventListener("click",save)
