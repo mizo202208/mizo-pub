@@ -51,14 +51,17 @@ function save () {
   },function (){
     alert("トークン１登録完了")
   })
-
 }
 
 // トークン１を表示
 function load () {
   chrome.storage.local.get(["tokn01"],function(test) {
-    const tokun1 = test.tokun1;
+    const tokun1 = test.tokun01;
+    console.log(test);
+    console.log(tokn1);
+    if (tokn1) {
     document.getElementById("tokn1").value = tokun1;
+    }
     })
 }
 
@@ -82,17 +85,19 @@ function save () {
   },function (){
     alert("トークン2登録完了")
   })
-
 }
 
 // トークン2を表示
 function load () {
   chrome.storage.local.get(["tokn02"],function(test) {
-    const tokn2 = test.tokun2;
+    const tokn2 = test.tokun02;
+    console.log(test);
+    console.log(tokn2);
+    if (tokn2) {
     document.getElementById("tokn2").value = tokn2;
+    }
     })
 }
-
 
 // toknset3というidを持つHTML要素を取得し、定数に代入する
 const toknSet3 = document.getElementById('toknset3')
@@ -114,7 +119,6 @@ function save () {
   },function (){
     alert("トークン3登録完了")
   })
-
 }
 
 // トークン3を表示
