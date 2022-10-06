@@ -11,42 +11,21 @@ console.log ("読み込みました");
 
 }
 
-// 送金先アドレスを表示
+
+
+
+// トークンを表示
 function load () {
-  chrome.storage.local.get(["address"],function(test) {
+  chrome.storage.local.get(["address","tokn01","tokn02","tokn03"],function(test) {
     const address = test.address;
+    const tokn1 = test.tokn01;
+    const tokn2 = test.tokn02;
+    const tokn3 = test.tokn03;
     console.log(test);
-    console.log(address);
-    document.getElementById("soukin").textContent = address;
-    })
-}
-
-// トークン１を表示
-function load () {
-  chrome.storage.local.get(["tokn01"],function(test) {
-    const tokn01 = test.tokn01;
-    console.log(test);
-    console.log(tokn01);
-    document.getElementById('tokn1').textContent = tokn01;
-  })
-}
-
-// トークン２を表示
-function load () {
-  chrome.storage.local.get(["tokn02"],function(test) {
-    const tokn2 = test.tokn2;
-    console.log(test);
-    console.log(tokn2);
+    
+    document.getElementById('soukin').textContent = address;
+    document.getElementById('tokn1').textContent = tokn1;
     document.getElementById('tokn2').textContent = tokn2;
-  })
-}
-
-// トークン３を表示
-function load () {
-  chrome.storage.local.get(["tokn03"],function(test) {
-    const tokn3 = test.tokn3;
-    console.log(test);
-    console.log(tokn3);
     document.getElementById('tokn3').textContent = tokn3;
   })
 }
