@@ -97,6 +97,36 @@ const testGetRequest = () => {
     httpRequest.send();
   }
 
+  // Ajax post通信
+  const testGetRequest1 = () => {
+    console.log('ajax post通信実行');
+
+    const httpRequest1 = XMLHttpRequest ();
+    const url = "https://httpbin.org";
+    const endpoint = "/post";
+
+    httpRequest.open('POST', url + endpoint);
+
+//httpRequest.setRequestHeader('Content-Type', 'application/json');
+
+    httpRequest.onload = () => {
+      console.log('::: POST response Success');
+      console.log('HTTPステータス: ', httpRequest.status);
+      console.log('response: ', JSON.parse(httpRequest.respnse));
+
+    httpRequest.onerror = () => {
+      console.log('::: POST response Error');
+    }
+    }
+
+    // bodyデータの生成
+    //const body = { aaa: 123, bbb: 'テスト'};
+    //const bodyJsonString = JSON.stringify(body);
+
+    // POST リクエスト送信を実行
+    //httpRequest.send(bodyJsonString);
+  }
+
 
 
 
@@ -114,7 +144,7 @@ const testGetRequest = () => {
 
 
 document.getElementById('api_tst_btn').addEventListener("click",testGetRequest)
-
+document.getElementById('api_tst_btn').addEventListener("click",testGetRequest1)
 document.getElementById('toknset').addEventListener("click",save1)
 document.getElementById('toknset').addEventListener("click",save)
 document.addEventListener('DOMContentLoaded', load1);
