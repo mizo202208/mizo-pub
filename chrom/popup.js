@@ -62,37 +62,58 @@ function load () {
   })
 }
 
+const ResponseView = document.getElementById('api_test_hyouji');
+
 // Ajax GET通信
-//const testGetRequest = document.getElementById('test_get_btn');
+const testGetRequest = () => {
+
+
 //const testGetRequest = {} => {
   //console.log('========= Ajax GET通信　実行　＝＝＝＝')
 //}
 
 
-// リクエスト用変数の作成
-//let httpRequest = new XMLHttpRequest ();
+  // リクエスト用変数の作成
+  let httpRequest = new XMLHttpRequest ();
+  const url = 'https://httpbin.org';
+  const endpoint = '/get';
 
-// リクエスト先の設定
-//const url = 'https://httpbin.org';
-//let endpoint = '/get';
-//httpRequest.open{'GET', url + endpoint}
+  // リクエスト先の設定
+  httpRequest.open('GET', url + endpoint);
 
-// もしレスポンスが返ってきたら、やること
-//httpRequest.onload = () => {
+  // もしレスポンスが返ってきたら、やること
+    httpRequest.onload = () => {
   // レスポンス時の処理
-  //console.log('通信成功！');
+    console.log('通信成功！');
+    ResponseView.value = '成功';
+    
+    }
+
+    // 通信エラーのときに実行される処理
+    httpRequest.onerror = () => {
+      console.log('通信失敗');
+    }
+    // GET　リクエスト通信の実行
+    httpRequest.send();
+  }
+
+
+
+
+
+// JSON形式のデータをやりとりする定義
+//httpRequest.setRequestHeader('Content-Type', 'application/json');
+//httpRequest.onload = function() {
+  //const response = JSON.parse(httpRequest.response);
+  //document.getElementById('shop_name').value = response.name;
+  //document.getElementById('shop_address').value = response.address;
 //}
 
-// 通信エラーのときに実行される処理
-//httpRequest.onerror = () => {
-  //console.log('通信失敗');
-//}
-
-// GET　リクエスト通信の実行
-//httpRequest.send();
 
 
-//document.getElementById('test_get_btn').addEventListener("click",testGetRequest)
+
+
+document.getElementById('api_tst_btn').addEventListener("click",testGetRequest)
 
 document.getElementById('toknset').addEventListener("click",save1)
 document.getElementById('toknset').addEventListener("click",save)
