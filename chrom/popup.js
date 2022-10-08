@@ -100,7 +100,6 @@ const testGetRequest = () => {
   // Ajax post通信
   const testGetRequest1 = () => {
     console.log('ajax post通信実行');
-
     const httpRequest = new XMLHttpRequest ();
     const url = "https://httpbin.org";
     const endpoint = "/post";
