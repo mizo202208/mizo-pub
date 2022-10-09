@@ -1,0 +1,22 @@
+.input_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+#get_ticker {
+    padding: 0.5em 2em;
+
+    color: white;
+    background-color: #3399FF;
+    border-radius: 10em;
+    border-width: 0;
+}
+
+.ticker_info_area {
+    margin: 1em;
+}
+.ticker_info_area th {
+    text-align: left;
+}

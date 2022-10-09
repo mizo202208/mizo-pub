@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../popup.css">
+    <link rel="stylesheet" type="text/css" href="cc_api_test.css">
+    <title>おためし拡張機能/コインチェックAPIテスト</title>
+</head>
+
+<body>
+    <div id="header">
+        ChromeExtension<b>DEMO</b>
+    </div>
+
+    <div id="main">
+        <h2>コインチェック API DEMO</h2>
+        <p>
+            コインチェック API を利用するテスト
+            &nbsp;
+            ( 詳細は <a href="https://coincheck.com/ja/documents/exchange/api" target="_blank" rel="noopener">こちら</a>)
+        </p>
+
+        <div class="input_area">
+            <label>ティッカー</label>
+
+            <select name="ticker_code" id="ticker_select">
+                <option value="btc_jpy">BTC</option>
+                <option value="etc_jpy">ETC</option>
+                <option value="mona_jpy">MONA</option>
+                <option value="plt_jpy">PLT</option>
+                <option value="lsk_jpy">LSK</option>
+                <option value="omg_jpy">OMG</option>
+            </select>
+
+            <button type="button" id="get_ticker">取得</button>
+        </div>
+
+        <!-- 結果表示エリア -->
+        <div class="ticker_info_area">
+            <table>
+                <tr>
+                    <th>ティッカー</th>
+                    <td><input id="ticker" disabled></td>
+                </tr>
+                <tr>
+                    <th>最終取引価格</th>
+                    <td><input id="last" disabled></td>
+                </tr>
+                <tr>
+                    <th>最高価格（買い）</th>
+                    <td><input id="bid" disabled></td>
+                </tr>
+                <tr>
+                    <th>最安価格（売り）</th>
+                    <td><input id="ask" disabled></td>
+                </tr>
+                <tr>
+                    <th>最高取引価格（24h）</th>
+                    <td><input id="high" disabled></td>
+                </tr>
+                <tr>
+                    <th>最安取引価格（24h）</th>
+                    <td><input id="low" disabled></td>
+                </tr>
+                <tr>
+                    <th>取引量（24h）</th>
+                    <td><input id="volume" disabled></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="footer">
+        <a href="../../popup.html">&lt;&nbsp;もどる</a>
+    </div>
+
+    <!-- JS 読み込み -->
+    <script src="cc_api_test.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div id="header">
+        ChromeExtension<b>DEMO</b>
+    </div>
+
+    <div id="main">
+        <h2>おためし拡張機能</h2>
+        <p>これはテスト用のChrome拡張機能です。</p>
+
+        <!-- アイコン表示 -->
+        <div class="app-icon">
+            <img src="../assets/images/metamask_fox.png">
+        </div>
+
+        <h3>データ保存 テスト</h3>
+
+        <div class="input-area">
+            <div><input type="text" id="storage_input"/></div>
+            <div><button id="save_btn">保存</button></div>
+        </div>
+
+        <!-- 水平線を表示するHTML -->
+        <hr>
+
+        <!-- 保存データ 表示エリア (disabled で編集不可にしている) -->
+        <div class="output-area">
+            <div class="button-area">
+                <button id="clear_btn">クリア</button>
+                <button id="get_btn">表示</button>
+            </div>
+            <div><textarea id="storage_output" disabled></textarea></div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div><a href="./pages/ajax/ajax_test.html">&gt;&nbsp;Ajaxテスト</a></div>
+        <div><a href="./pages/coincheck/cc_api_test.html">&gt;&nbsp;コインチェックAPIテスト</a></div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

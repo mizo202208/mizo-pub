@@ -1,0 +1,33 @@
+#main {
+    padding: 1rem;
+}
+.title {
+    color: #999;
+}
+
+.button_area {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.button_area button {
+    margin: 1em;
+    padding: 0.5em 1em;
+
+    width: 8em;
+    color: white;
+    background-color: #3399FF;
+    border-radius: 10em;
+    border-width: 0;
+}
+
+.response_view_area {
+    display: flex;
+    justify-content: center;
+}
+.response_view_area textarea {
+    width: 75%;
+    min-height: 10em;
+
+    padding: 0.5em;
+}

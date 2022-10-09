@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../popup.css">
+    <link rel="stylesheet" type="text/css" href="ajax_test.css">
+    <title>おためし拡張機能/Ajaxテスト</title>
+</head>
+
+<body>
+    <div id="header">
+        ChromeExtension<b>DEMO</b>
+    </div>
+
+    <div id="main">
+        <h2>Ajax DEMO</h2>
+        <p>Ajaxを利用した、非同期通信テスト</p>
+
+        <div class="button_area">
+            <!-- イベント処理でDOM操作 -->
+            <button type="button" id="test_get_btn">GETテスト</button>
+            <button type="button" id="test_post_btn">POSTテスト</button>
+        </div>
+
+        <!-- 通信結果 表示エリア -->
+        <div class="response_view_area">
+            <textarea id="ajax_response" disabled></textarea>
+        </div>
+    </div>
+
+    <div id="footer">
+        <a href="../../popup.html">&lt;&nbsp;もどる</a>
+    </div>
+
+    <!-- JS 読み込み -->
+    <script src="ajax_test.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    min-width: 350px;
+    min-height: 500px;
+}
+
+#header {
+    color: white;
+    background-color: #333;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+}
+#main {
+    padding: 1em;
+}
+#footer {
+    padding: 1em;
+}
+
+/* アイコン表示に関する装飾 */
+.app-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+.app-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* 入力関連エリアは横並びにする. そして、画面中央に配置する */
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+/* 出力関連エリアは、画面中央に配置する */
+.output-area {
+    margin: 1rem;
+}
+.output-area textarea {
+    width: 100%;
+}
+.output-area .button-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 入力関連エリア、表示関連エリアのすぐ下の div は少し感覚を開ける */
+.input-area > div,
+.output-area > div {
+    margin: 0.5rem;
+}
+
+/* ボタンの装飾 */
+#save_btn, #get_btn {
+    margin: 1em;
+    padding: 0.5em 1em;
+
+    width: 8em;
+    color: white;
+    background-color: #3399FF;
+    border-radius: 10em;
+    border-width: 0;
+}
+#clear_btn {
+    margin: 1em;
+    padding: 0.4em 1em;
+
+    width: 8em;
+    color: #d13442;
+    background-color: white;
+    border-radius: 10em;
+    border: 1px solid #d13442;
+}

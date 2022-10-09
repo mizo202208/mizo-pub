@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "おためし拡張",
+  "version": "1.0.0.0",
+
+
+  "action": {
+    "default_title": "Click Me",
+    "default_popup": "popup/popup.html"
+  },
+  "description": "拡張機能の説明がここにきます",
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["https://www.yahoo.co.jp/"],
+    "js": [
+      "content.js"
+    ]
+  }],
+
+  "permissions": [
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://coincheck.com/*"
+  ]
+}

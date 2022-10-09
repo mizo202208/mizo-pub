@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMIOKA's GitHub Pages</title>
+</head>
+<body>
+    <div id="header">
+        MetaMask API 使用 <b>DEMO</b>
+    </div>
+
+    <div id="main">
+        <p>ブラウザにインストールされているウォレットを接続して、情報を表示するサンプルです。</p>
+        <p>
+            これ以降の送金処理などの処理実装は、
+            <a href="https://docs.metamask.io/guide/ethereum-provider.html" target="_blank" rel="noopener">公式ドキュメント</a>
+            のAPI使用方法を参照してください。
+        </p>
+
+        <div class="button-area">
+            <button id="connect_btn">ウォレットに接続</button>
+        </div>
+
+        <div id="wallet_accout_list">
+            <!-- ここに接続したウォレットを DOM で追加してみます -->
+        </div>
+    </div>
+
+    <script src="base_scripts.js"></script>
+</body>
+</html>
